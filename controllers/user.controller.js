@@ -2,15 +2,6 @@ import {db} from '../libs/dbConnect.js';
 import {ObjectId} from 'mongodb';	
 const collection = db.collection('users');
 
-export const test = async (req, res) =>{
-  try {
-    //finding everything in collection users and putting it in an array
-    const result = await collection.find({}).toArray();
-    res.status(200).json(result);
-  } catch (err) {
-    res.status(500).json({message: err.message});
-  }
-}
 
 // getUser function 
 
